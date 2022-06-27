@@ -1,0 +1,76 @@
+body {
+    background-color: beige;
+}
+
+.collapse-area {
+    background-color: beige;
+    padding: 10px;
+
+}
+
+.collapse {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.collapse__button {
+    background-color: rgb(26, 170, 217);
+    border-radius: 5px;
+    border: 2px solid #fff;
+    padding: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.collapse__button:hover {
+    border: 2px solid lightblue;
+}
+
+.collapse__button:active {
+    background-color: rgb(92, 193, 227);
+}
+
+.collapse__text {
+    padding: 0px 5px;
+    overflow: hidden;
+    border: 0px solid #fff;
+    border-radius: 0px;
+    max-height: 0;
+    margin: 0;
+    transition-property: border, border-radius,max-height,padding,margin;
+    transition-delay: 0s,0.1s,0.1s,0.1s;
+    transition-duration: 0.5s, 0.5s, 0.5s;
+}
+
+.collapse__text.active {
+    padding: 10px 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 50px;
+    margin: 10px 0;
+    transition-property:  margin,padding,max-height, border, border-radius;
+    transition-delay: 0s,0.1s,0.1s,0.1s,0.1s;
+    transition-duration: 0.5s, 0.5s, 0.5s;
+}
+
+@keyframes textin {
+
+    100% {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        max-height: 100px;
+    }
+}
+
+@keyframes textout {
+
+    100% {
+        overflow: hidden;
+        border: 0px solid #fff;
+        border-radius: 0;
+        max-height: 0px;
+    }
+}
